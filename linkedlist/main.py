@@ -61,3 +61,5 @@ class LinkedList():
             next = next.next()
 
 
+    def pop(self):
+        self.remove(self._last._index)
