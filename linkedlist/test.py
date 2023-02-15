@@ -64,6 +64,18 @@ class TestCase(unittest.TestCase):
         self.assertEquals(list.len(), 3)
         self.assertEquals(list.last()._index, 2)
 
+    def test_list_remove_last(self):
+        list = LinkedList()
+        list.add(1)
+        list.add(2)
+        list.add(3)
+        list.add(4)
+        self.assertEquals(list.len(), 4)
+        self.assertEquals(list.last()._index, 3)
+        list.remove(0)
+        self.assertEquals(list.len(), 3)
+        self.assertEquals(list.first().value, 2)
+
     def test_add_in_the_middle(self):
         list = LinkedList()
         list.add(1)
