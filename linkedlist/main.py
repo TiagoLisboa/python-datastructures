@@ -66,6 +66,14 @@ class LinkedList():
         return self._last._index + 1 if self._last else 0
 
     def remove(self, index):
+        if self.len() == 0:
+            return
+
+        if self.len() == 1:
+            self._first = None
+            self._last = None
+            return
+
         if index == 0:
             self._first = self._first.next()
             next = self._first.next()
