@@ -94,3 +94,13 @@ class LinkedList():
 
     def pop(self):
         self.remove(self._last._index)
+
+    def __str__(self) -> str:
+        items = []
+        item = self._first
+
+        while item:
+            items.append(item.value)
+            item = item.next()
+
+        return items.__str__()

@@ -2,7 +2,10 @@ from linkedlist.main import LinkedList
 
 
 class Stack():
-    list: LinkedList = LinkedList()
+    list: LinkedList
+
+    def __init__(self) -> None:
+        self.list = LinkedList()
 
     def len(self):
         return self.list.len()
@@ -12,3 +15,9 @@ class Stack():
 
     def pop(self):
         self.list.remove(self.list._last._index)
+
+    def peek(self):
+        return self.list._last.value
+
+    def __str__(self) -> str:
+        return self.list.__str__()
