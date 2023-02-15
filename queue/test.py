@@ -27,3 +27,6 @@ class QueueTestCase(unittest.TestCase):
 
         queue.enqueue('test')
         self.assertEqual(queue.front(), 'test')
+
+        queue.dequeue()
+        self.assertEqual(queue.front(), 'test')
