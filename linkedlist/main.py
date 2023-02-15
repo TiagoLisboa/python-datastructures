@@ -44,7 +44,7 @@ class LinkedList():
         return item
 
     def len(self) -> int:
-        return self._last._index + 1
+        return self._last._index + 1 if self._last else 0
 
     def remove(self, index):
         previous = self.index(index - 1)
@@ -59,7 +59,6 @@ class LinkedList():
         while next:
             next._index = next._index - 1
             next = next.next()
-
 
     def pop(self):
         self.remove(self._last._index)
